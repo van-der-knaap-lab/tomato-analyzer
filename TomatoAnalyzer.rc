@@ -1,0 +1,1244 @@
+// Microsoft Visual C++ generated resource script.
+//
+#include "resource.h"
+
+#define APSTUDIO_READONLY_SYMBOLS
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 2 resource.
+//
+#include "afxres.h"
+
+/////////////////////////////////////////////////////////////////////////////
+#undef APSTUDIO_READONLY_SYMBOLS
+
+/////////////////////////////////////////////////////////////////////////////
+// English (United States) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)
+LANGUAGE LANG_ENGLISH, SUBLANG_ENGLISH_US
+#pragma code_page(1252)
+
+#ifdef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// TEXTINCLUDE
+//
+
+1 TEXTINCLUDE 
+BEGIN
+    "resource.h\0"
+END
+
+2 TEXTINCLUDE 
+BEGIN
+    "#include ""afxres.h""\r\n"
+    "\0"
+END
+
+3 TEXTINCLUDE 
+BEGIN
+    "#define _AFX_NO_SPLITTER_RESOURCES\r\n"
+    "#define _AFX_NO_OLE_RESOURCES\r\n"
+    "#define _AFX_NO_TRACKER_RESOURCES\r\n"
+    "#define _AFX_NO_PROPERTY_RESOURCES\r\n"
+    "\r\n"
+    "#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)\r\n"
+    "LANGUAGE 9, 1\r\n"
+    "#pragma code_page(1252)\r\n"
+    "#include ""res\\TomatoAnalyzer.rc2""  // non-Microsoft Visual C++ edited resources\r\n"
+    "#include ""afxres.rc""         // Standard components\r\n"
+    "#include ""afxprint.rc""       // printing/print preview resources\r\n"
+    "#endif\r\n"
+    "\0"
+END
+
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Icon
+//
+
+// Icon with lowest ID value placed first to ensure application icon
+// remains consistent on all systems.
+IDR_OSU_TOMATO          ICON                    "res\\idr_main.ico"
+IDI_SMALL_TOMATO        ICON                    "res\\icon1.ico"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Bitmap
+//
+
+IDR_MAINFRAME           BITMAP                  "res\\toolbar1.bmp"
+IDB_DELETE_FLAG         BITMAP                  "res\\bitmap1.bmp"
+IDB_PATTERN             BITMAP                  "res\\pattern.bmp"
+IDB_LEGEND              BITMAP                  "res\\legend.bmp"
+IDB_CHECKBOX_STATE      BITMAP                  "res\\checkbox.bmp"
+IDB_BITMAP1             BITMAP                  "res\\bmp00001.bmp"
+IDB_BITMAP2             BITMAP                  "res\\bitmap2.bmp"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Menu
+//
+
+IDR_MAINFRAME MENU
+BEGIN
+    POPUP "&File"
+    BEGIN
+        MENUITEM "&New\tCtrl+N",                ID_FILE_NEW
+        MENUITEM "&Open...\tCtrl+O",            ID_FILE_OPEN
+        MENUITEM "Close",                       ID_IMAGE_CLOSE
+        MENUITEM "&Save\tCtrl+S",               ID_FILE_SAVE
+        MENUITEM "Save &As...",                 ID_FILE_SAVE_AS
+        MENUITEM SEPARATOR
+        MENUITEM "Recent File",                 ID_FILE_MRU_FILE1
+        MENUITEM SEPARATOR
+        MENUITEM "E&xit\tCtrl+Q",               ID_APP_EXIT
+    END
+    POPUP "&View"
+    BEGIN
+        MENUITEM "Zoom Full",                   ID_ZOOM
+        POPUP "Present Size"
+        BEGIN
+            MENUITEM "25%",                         ID_ZOOM25
+            MENUITEM "50%",                         ID_ZOOM50
+            MENUITEM "80%",                         ID_ZOOM80
+            MENUITEM "100%",                        ID_ZOOM100
+            MENUITEM "150%",                        ID_ZOOM150
+            MENUITEM "200%",                        ID_ZOOM200
+        END
+    END
+    POPUP "&Analyze"
+    BEGIN
+        MENUITEM "&Analyze\tCtrl+A",            ID_ANALYZE_IMG
+        MENUITEM "&Color Test\tCtrl+C",         ID_ANALYZE_COLOR
+    END
+    POPUP "Settings"
+    BEGIN
+        MENUITEM "Select Scanner DPI and Units...", IDC_SCANNER_DPI
+        MENUITEM "Select Attributes...",        IDC_DATA_SELECTION
+        MENUITEM "Select Blockiness Position...", IDC_BLOCKINESS_POS
+        MENUITEM "Select Proximal and Distal Angles...", IDC_POINTI_LEVEL
+        MENUITEM "Select Number of Morphometric Points...", ID_SETTINGS_EXPORTPCAPOINTS
+        MENUITEM "Select Default Eccentricity Ellipse Size...", ID_SETTINGS_DEFAULTELLIPSESIZE
+        POPUP "Load/Save Settings"
+        BEGIN
+            MENUITEM "Load Settings",               ID_USERSETTINGS_LOADSETTINGS
+            MENUITEM "Save Settings",               ID_USERSETTINGS_SAVESETTINGS
+        END
+       // MENUITEM "Manually Select the DPI",     IDC_USER_DPI
+    END
+    POPUP "&Help"
+    BEGIN
+        MENUITEM "&About Tomato Analyzer...",   ID_APP_ABOUT
+        MENUITEM "Disclaimer...",               ID_HELP_DISCLAIMER
+    END
+END
+
+IDR_ZOOMMENU MENU
+BEGIN
+    POPUP "Zoom"
+    BEGIN
+        MENUITEM "Zoom to 25%",                 ID_ZOOM25
+        MENUITEM "Zoom to 50%",                 ID_ZOOM50
+        MENUITEM "Zoom to 80%",                 ID_ZOOM80
+        MENUITEM "100%",                        ID_ZOOM100
+        MENUITEM "Zoom to 150%",                ID_ZOOM150
+        MENUITEM "Zoom to 200%",                ID_ZOOM200
+    END
+    POPUP "Revise"
+    BEGIN
+        MENUITEM "&Rotate\tShift+R",            ID_MANUAL_ROTATE
+        MENUITEM "Reset &Rotation\tAlt+R",      ID_MANUAL_RESET_ROTATE
+        MENUITEM SEPARATOR
+        MENUITEM "&Boundary\tShift+B",          ID_MANUAL_SHAPE
+        MENUITEM "Reset &Boundary\tAlt+B",      ID_MANUAL_RESET_SHAPE
+        MENUITEM SEPARATOR
+        MENUITEM "&Proximal End\tShift+P",      ID_MANUAL_ANGLE_STEM
+        MENUITEM "&Distal End\tShift+D",        ID_MANUAL_ANGLE_BLM
+        MENUITEM SEPARATOR
+        MENUITEM "Flat Proximal Angle Micro",   ID_FLAT_PROXIMAL_MICRO
+        MENUITEM "Flat Proximal Angle Macro",   ID_FLAT_PROXIMAL_MACRO
+        MENUITEM "Flat Distal Angle Micro",     ID_FLAT_DISTAL_MICRO
+        MENUITEM "Flat Distal Angle Macro",     ID_FLAT_DISTAL_MACRO
+        MENUITEM SEPARATOR
+        MENUITEM "Reset Proximal Angle Micro",  ID_RESET_PROXIMAL_MICRO
+        MENUITEM "Reset Proximal Angle Macro",  ID_RESET_PROXIMAL_MACRO
+        MENUITEM "Reset Distal Angle Micro",    ID_RESET_DISTAL_MICRO
+        MENUITEM "Reset Distal Angle Macro",    ID_RESET_DISTAL_MACRO
+        MENUITEM SEPARATOR
+        MENUITEM "&Auto-Rotate\tShift+A",       ID_AUTO_ROTATE
+        MENUITEM "Reset &Auto-Rotate\tAlt+A",   ID_REVISE_RESETAUTO
+        MENUITEM SEPARATOR
+        MENUITEM "Adjust Eccentricity &Ellipse\tShift+E", ID_REVISE_ADJUSTELLIPSE
+        MENUITEM "Reset Eccentricity &Ellipse\tAlt+E", ID_REVISE_RESETELLIPSE
+        MENUITEM SEPARATOR
+        MENUITEM "Adjust Dis&tal Protrusion\tShift+T", ID_REVISE_ADJUSTTIPAREA
+        MENUITEM "Reset Dis&tal Protrusion\tAlt+T", ID_REVISE_RESETTIPAREA
+        MENUITEM "E&liminate Distal Protrusion\tAlt+L", ID_ELIMINATE
+        MENUITEM SEPARATOR
+        MENUITEM "Adjust Tomato Pericarp Boundary\tShift+I", ID_INNER_BOUNDARY
+        MENUITEM "Reset Tomato Pericarp Boundary\tAlt+I", ID_RESETINNER
+        MENUITEM "Default Tomato Pericarp Boundary\tShift+U", ID_PERICARPSIZE
+        MENUITEM SEPARATOR
+        MENUITEM "Adjust Pepper Pericarp Boundary\tShift+Z", ID_PEPPER_PERICARP
+        MENUITEM "Reset Pepper Pericarp Boundary\tAlt+Z", ID_RESET_PEPPER_PERICARP
+    END
+    POPUP "Analyze"
+    BEGIN
+        MENUITEM "Single...",                   ID_ANALYZE_SINGLE
+        MENUITEM "Batch...",                    IDC_ANALYZE_BATCH
+    END
+    POPUP "Save"
+    BEGIN
+        MENUITEM "Save",                        ID_FILE_SAVE
+        MENUITEM "Save As...",                  ID_FILE_SAVE_AS
+    END
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Accelerator
+//
+
+IDR_MAINFRAME ACCELERATORS
+BEGIN
+    "C",            ID_ANALYZE_COLOR,       VIRTKEY, CONTROL, NOINVERT
+    "A",            ID_ANALYZE_IMG,         VIRTKEY, CONTROL, NOINVERT
+    "Q",            ID_APP_EXIT,            VIRTKEY, CONTROL, NOINVERT
+    "A",            ID_AUTO_ROTATE,         VIRTKEY, SHIFT, NOINVERT
+    "L",            ID_ELIMINATE,           VIRTKEY, ALT, NOINVERT
+    "N",            ID_FILE_NEW,            VIRTKEY, CONTROL, NOINVERT
+    "O",            ID_FILE_OPEN,           VIRTKEY, CONTROL, NOINVERT
+    "P",            ID_FILE_PRINT,          VIRTKEY, CONTROL, NOINVERT
+    "S",            ID_FILE_SAVE,           VIRTKEY, CONTROL, NOINVERT
+    "I",            ID_INNER_BOUNDARY,      VIRTKEY, SHIFT, NOINVERT
+    "D",            ID_MANUAL_ANGLE_BLM,    VIRTKEY, SHIFT, NOINVERT
+    "P",            ID_MANUAL_ANGLE_STEM,   VIRTKEY, SHIFT, NOINVERT
+    "R",            ID_MANUAL_RESET_ROTATE, VIRTKEY, ALT, NOINVERT
+    "B",            ID_MANUAL_RESET_SHAPE,  VIRTKEY, ALT, NOINVERT
+    "R",            ID_MANUAL_ROTATE,       VIRTKEY, SHIFT, NOINVERT
+    "B",            ID_MANUAL_SHAPE,        VIRTKEY, SHIFT, NOINVERT
+    VK_F6,          ID_NEXT_PANE,           VIRTKEY, NOINVERT
+    "U",            ID_PERICARPSIZE,        VIRTKEY, SHIFT, NOINVERT
+    VK_F6,          ID_PREV_PANE,           VIRTKEY, SHIFT, NOINVERT
+    "I",            ID_RESETINNER,          VIRTKEY, ALT, NOINVERT
+    "E",            ID_REVISE_ADJUSTELLIPSE, VIRTKEY, SHIFT, NOINVERT
+    "T",            ID_REVISE_ADJUSTTIPAREA, VIRTKEY, SHIFT, NOINVERT
+    "A",            ID_REVISE_RESETAUTO,    VIRTKEY, ALT, NOINVERT
+    "E",            ID_REVISE_RESETELLIPSE, VIRTKEY, ALT, NOINVERT
+    "T",            ID_REVISE_RESETTIPAREA, VIRTKEY, ALT, NOINVERT
+    "Z",            ID_PEPPER_PERICARP,     VIRTKEY, SHIFT, NOINVERT
+    "Z",            ID_RESET_PEPPER_PERICARP, VIRTKEY, ALT, NOINVERT
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog
+//
+
+IDD_ABOUTBOX DIALOGEX 0, 0, 245, 55
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "About Tomato Analyzer"
+FONT 8, "MS Shell Dlg", 0, 0, 0x0
+BEGIN
+    ICON            128,IDC_STATIC,11,17,20,20
+    LTEXT           "Tomato Analyzer Version 4.0",IDC_STATIC,40,10,119,8,SS_NOPREFIX
+    LTEXT           "Copyright (C) 2005-2010.",IDC_STATIC,40,25,119,8
+    DEFPUSHBUTTON   "OK",IDOK,188,7,50,16,WS_GROUP
+    LTEXT           "Ohio State University",IDC_STATIC,40,34,67,8
+END
+
+IDR_MAINFRAME DIALOGEX 0, 0, 330, 16
+STYLE DS_SETFONT | DS_FIXEDSYS | WS_CHILD
+FONT 8, "MS Shell Dlg", 0, 0, 0x1
+BEGIN
+    LTEXT           "TODO: layout dialog bar ",IDC_STATIC,12,4,300,8
+END
+
+IDD_PROGRESS_DIALOG DIALOG 0, 0, 135, 49
+STYLE DS_SETFONT | DS_MODALFRAME | DS_3DLOOK | DS_CENTER | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Dialog"
+FONT 8, "MS Sans Serif"
+BEGIN
+    CONTROL         "Progress1",IDC_PROGRESS_CON,"msctls_progress32",PBS_SMOOTH | WS_BORDER,25,28,80,14
+    LTEXT           "Static",IDC_MESSAGE,7,6,121,21
+END
+
+IDD_SLICEINFO DIALOGEX 0, 0, 325, 133
+STYLE DS_SETFONT | DS_MODALFRAME | DS_3DLOOK | WS_CHILD
+EXSTYLE WS_EX_CLIENTEDGE | WS_EX_STATICEDGE
+FONT 8, "MS Sans Serif", 0, 0, 0x1
+BEGIN
+    CONTROL         "List1",IDC_SLICEINFO_LIST,"SysListView32",LVS_REPORT | LVS_NOSORTHEADER | WS_BORDER | WS_TABSTOP,6,7,312,96,WS_EX_STATICEDGE
+END
+
+IDD_PARAMETER DIALOG 0, 0, 210, 59
+STYLE DS_SETFONT | DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Setting parameters"
+FONT 8, "MS Sans Serif"
+BEGIN
+    DEFPUSHBUTTON   "OK",IDOK,153,7,50,14
+    PUSHBUTTON      "Cancel",IDCANCEL,153,24,50,14
+    EDITTEXT        IDC_SHAPEINDEX,95,7,17,14,ES_NUMBER
+    LTEXT           "elongation parameter",IDC_STATIC,7,7,76,12
+    LTEXT           "%",IDC_STATIC,120,7,19,13
+    LTEXT           "Shape curve threshold",IDC_STATIC,7,25,81,12
+    EDITTEXT        IDC_CURVE_THRESHOLD,95,25,17,15
+END
+
+IDD_SAVEDATADLG DIALOG 0, 0, 296, 217
+STYLE DS_SETFONT | DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Measurement Selection"
+FONT 8, "MS Sans Serif"
+BEGIN
+    DEFPUSHBUTTON   "OK",IDOK,33,196,50,14
+    PUSHBUTTON      "Cancel",IDCANCEL,211,196,50,14
+    LISTBOX         IDC_Candidates,9,23,104,65,LBS_SORT | LBS_NOINTEGRALHEIGHT | WS_VSCROLL | WS_TABSTOP
+    LISTBOX         IDC_Selected,184,24,104,164,LBS_NOINTEGRALHEIGHT | WS_VSCROLL | WS_TABSTOP
+    LTEXT           "Measurement pool",IDC_STATIC,7,7,104,11
+    LTEXT           "Measurement selected",IDC_STATIC,185,7,104,12
+    PUSHBUTTON      "--->>",IDC_ADD,124,42,50,14
+    PUSHBUTTON      "<<---",IDC_REMOVE,124,69,50,14
+    PUSHBUTTON      "Up",IDC_SAVEDATA_UP,135,143,38,14
+    PUSHBUTTON      "Down",IDC_SAVEDATA_DOWN,135,164,38,14
+    GROUPBOX        "Sequence",IDC_STATIC,127,131,50,57
+    CONTROL         "Tab1",IDC_TAB1,"SysTabControl32",0x0,7,111,100,75
+END
+
+IDD_SCANNER_DPI DIALOGEX 0, 0, 216, 57
+STYLE DS_SETFONT | DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Scanner DPI and Units"
+FONT 8, "MS Sans Serif", 0, 0, 0x0
+BEGIN
+    DEFPUSHBUTTON   "OK",IDOK,159,13,50,14
+    PUSHBUTTON      "Cancel",IDCANCEL,159,30,50,14
+    LTEXT           "Units Used",IDC_STATIC,21,36,38,8
+    EDITTEXT        IDC_SCANNER_DPI,71,12,31,13,ES_NUMBER
+    LTEXT           "Scanner DPI",IDC_STATIC,21,17,42,8
+    COMBOBOX        IDC_UNIT_SELECTION,71,32,54,51,CBS_DROPDOWNLIST | WS_VSCROLL | WS_TABSTOP
+END
+
+IDD_BLOCKINESS DIALOGEX 0, 0, 186, 82
+STYLE DS_SETFONT | DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Blockiness Position"
+FONT 8, "MS Sans Serif", 0, 0, 0x0
+BEGIN
+    DEFPUSHBUTTON   "OK",IDOK,129,7,50,14
+    PUSHBUTTON      "Cancel",IDCANCEL,129,24,50,14
+    LTEXT           "Upper position",IDC_STATIC,7,7,57,8
+    LTEXT           "Lower position",IDC_STATIC,7,46,46,8
+    EDITTEXT        IDC_UPPER,20,20,40,13,ES_AUTOHSCROLL
+    EDITTEXT        IDC_LOWER,19,56,40,13,ES_AUTOHSCROLL
+END
+
+IDD_SAVEDATA_DLG DIALOGEX 0, 0, 262, 180
+STYLE DS_SETFONT | DS_MODALFRAME | DS_3DLOOK | DS_CENTER | WS_POPUP | WS_VISIBLE | WS_CAPTION | WS_SYSMENU
+CAPTION "Dialog"
+FONT 8, "MS Sans Serif", 0, 0, 0x1
+BEGIN
+    DEFPUSHBUTTON   "OK",IDOK,205,7,50,14
+    PUSHBUTTON      "Cancel",IDCANCEL,205,28,50,14
+    CONTROL         "Tree1",IDC_SELECTION_TREE,"SysTreeView32",TVS_HASBUTTONS | TVS_HASLINES | TVS_LINESATROOT | TVS_SHOWSELALWAYS | TVS_NOTOOLTIPS | TVS_CHECKBOXES | WS_BORDER | WS_TABSTOP,7,7,195,166,WS_EX_CLIENTEDGE
+END
+
+IDD_SLICEINFO_DLG DIALOGEX 0, 0, 311, 144
+STYLE DS_SETFONT | WS_CHILD
+FONT 8, "MS Sans Serif", 0, 0, 0x1
+BEGIN
+    CONTROL         "List2",IDC_LIST2,"SysListView32",LVS_REPORT | WS_BORDER | WS_TABSTOP,13,32,283,97,WS_EX_STATICEDGE
+    CONTROL         "Tab1",IDC_PAGE,"SysTabControl32",0x0,7,7,297,130,WS_EX_CLIENTEDGE
+END
+
+IDD_SELECT_MEASUREMENT DIALOGEX 0, 0, 202, 174
+STYLE DS_SETFONT | DS_MODALFRAME | DS_3DLOOK | DS_CENTER | WS_POPUP | WS_VISIBLE | WS_CAPTION | WS_SYSMENU
+CAPTION "Attributes"
+FONT 8, "MS Sans Serif", 0, 0, 0x0
+BEGIN
+    DEFPUSHBUTTON   "OK",IDOK,145,62,50,14
+    PUSHBUTTON      "Cancel",IDCANCEL,145,82,50,14
+    CONTROL         "Tree1",IDC_TREE1,"SysTreeView32",TVS_HASBUTTONS | TVS_HASLINES | TVS_LINESATROOT | TVS_DISABLEDRAGDROP | TVS_CHECKBOXES | WS_BORDER | WS_HSCROLL | WS_TABSTOP,7,7,136,160
+    PUSHBUTTON      "Select All",IDC_SELECT_ALL,145,7,50,14
+END
+
+IDD_LEVEL_CONTROL1 DIALOGEX 0, 0, 148, 115
+STYLE DS_SETFONT | DS_MODALFRAME | DS_3DLOOK | DS_CENTER | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Proximal and Distal Angles"
+FONT 8, "MS Sans Serif", 0, 0, 0x0
+BEGIN
+    DEFPUSHBUTTON   "OK",IDOK,7,94,50,14
+    PUSHBUTTON      "Cancel",IDCANCEL,81,94,50,14
+    CONTROL         "Slider1",IDC_SLIDER_MACRO,"msctls_trackbar32",TBS_AUTOTICKS | TBS_TOP | WS_TABSTOP,7,23,130,15
+    CONTROL         "Slider2",IDC_SLIDER_MICRO,"msctls_trackbar32",TBS_AUTOTICKS | TBS_TOP | WS_TABSTOP,7,64,130,15
+    LTEXT           "Macro Distance",IDC_STATIC,7,7,65,8
+    LTEXT           "",IDC_MACRO_VALUE,75,7,21,9
+    LTEXT           "Micro Distance",IDC_STATIC,7,54,62,8
+    LTEXT           "",IDC_MICRO_VALUE,70,54,18,8
+END
+
+IDD_COLORTEST DIALOGEX 0, 0, 258, 270
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Color Test"
+FONT 8, "MS Shell Dlg", 0, 0, 0x0
+BEGIN
+    CONTROL         "Average color values",IDC_BASIC,"Button",BS_AUTO3STATE | WS_TABSTOP,17,24,83,10
+    CONTROL         "L*, hue, chroma distributions",IDC_DEFAULT_RANGES,
+                    "Button",BS_AUTO3STATE | WS_TABSTOP,17,42,109,10
+    CONTROL         "Set custom color parameters",IDC_USER_RANGES,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,17,60,107,10
+    CONTROL         "Illuminant C 2°",IDC_C_2,"Button",BS_AUTORADIOBUTTON | WS_GROUP,16,122,61,10
+    CONTROL         "Illuminant D65 2°",IDC_D65_2,"Button",BS_AUTORADIOBUTTON,89,122,67,10
+    CONTROL         "Illuminant D65 10°",IDC_D65_10,"Button",BS_AUTORADIOBUTTON,168,122,73,10
+    EDITTEXT        IDC_L_SLOPE,85,154,36,14,ES_AUTOHSCROLL
+    EDITTEXT        IDC_L_INTERCEPT,154,154,36,14,ES_AUTOHSCROLL
+    EDITTEXT        IDC_A_SLOPE,85,173,36,14,ES_AUTOHSCROLL
+    EDITTEXT        IDC_A_INTERCEPT,154,173,36,14,ES_AUTOHSCROLL
+    EDITTEXT        IDC_B_SLOPE,86,191,36,14,ES_AUTOHSCROLL
+    EDITTEXT        IDC_B_INTERCEPT,154,191,36,14,ES_AUTOHSCROLL
+    PUSHBUTTON      "Restore Defaults",IDC_RESTORE_DEFAULTS,92,220,74,14
+    DEFPUSHBUTTON   "Analyze color",IDC_ANALYZE_COLOR,24,248,50,15
+    PUSHBUTTON      "Calibrate",IDC_CALIBRATE,78,248,50,15
+    PUSHBUTTON      "Save settings",IDC_SAVE_SETTINGS,130,248,50,15
+    PUSHBUTTON      "Cancel",IDCANCEL,182,248,50,15
+    GROUPBOX        "Select Calibration Settings",IDC_STATIC,6,84,245,156
+    GROUPBOX        "Equations",IDC_STATIC,46,143,165,72
+    LTEXT           "L =",IDC_STATIC,67,154,11,14
+    LTEXT           "a =",IDC_STATIC,66,173,11,8
+    LTEXT           "b =",IDC_STATIC,67,191,11,8
+    LTEXT           "× L' +",IDC_STATIC,130,154,23,14
+    LTEXT           "× a' +",IDC_STATIC,130,173,22,8
+    LTEXT           "× b' +",IDC_STATIC,129,191,24,8
+    LTEXT           "Last calibration: Unknown",IDC_CALIBRATION_MESSAGE,16,103,192,8,SS_PATHELLIPSIS
+    GROUPBOX        "Select Color Attributes",IDC_STATIC,6,7,245,74
+END
+
+IDD_STARTUP DIALOGEX 0, 0, 355, 222
+STYLE DS_SETFONT | DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Tomato Analyzer: License Agreement"
+FONT 8, "MS Sans Serif", 400, 0, 0x0
+BEGIN
+    DEFPUSHBUTTON   "OK",IDOK,150,197,50,14
+    GROUPBOX        "Acceptance of License Agreement",IDC_STATIC,7,7,341,208
+    EDITTEXT        IDC_EDIT1,14,23,327,170,ES_MULTILINE | ES_AUTOVSCROLL | ES_READONLY | WS_VSCROLL
+END
+
+IDD_PCA_POINTS DIALOGEX 0, 0, 301, 73
+STYLE DS_SETFONT | DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Number of Morphometric Points"
+FONT 8, "MS Sans Serif", 0, 0, 0x0
+BEGIN
+    DEFPUSHBUTTON   "OK",IDOK,95,52,50,14
+    PUSHBUTTON      "Cancel",IDCANCEL,157,52,50,14
+    CONTROL         "Slider1",IDC_SLIDER1,"msctls_trackbar32",TBS_AUTOTICKS | TBS_BOTH | WS_TABSTOP,29,34,242,12
+    CTEXT           "Number of Morphometric Points",IDC_STATIC,94,9,112,8
+    LTEXT           " ",IDC_STATIC1,142,22,17,13
+END
+
+IDD_ELLIPSE_SIZE DIALOGEX 0, 0, 186, 90
+STYLE DS_SETFONT | DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Default Eccentricity Ellipse Size"
+FONT 8, "MS Sans Serif", 0, 0, 0x0
+BEGIN
+    DEFPUSHBUTTON   "OK",IDOK,39,69,50,14
+    PUSHBUTTON      "Cancel",IDCANCEL,97,69,50,14
+    LTEXT           "Set Ellipse Size",IDC_STATIC,64,14,49,8
+    LTEXT           "",IDC_STATIC1,80,27,18,16
+    CONTROL         "Slider1",IDC_SLIDER1,"msctls_trackbar32",TBS_AUTOTICKS | TBS_BOTH | WS_TABSTOP,25,49,139,9
+END
+
+IDD_PERICARPSIZE DIALOG 0, 0, 186, 90
+STYLE DS_SETFONT | DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Pericarp Size"
+FONT 8, "MS Sans Serif"
+BEGIN
+    LTEXT           "Set Pericarp Boundary",IDC_STATIC,59,14,72,8
+    LTEXT           "",IDC_STATIC1,86,26,18,16
+    CONTROL         "Slider1",IDC_SLIDER1,"msctls_trackbar32",TBS_AUTOTICKS | TBS_BOTH | WS_TABSTOP,25,49,139,9
+    DEFPUSHBUTTON   "OK",IDOK,39,69,50,14
+    PUSHBUTTON      "Cancel",IDCANCEL,97,69,50,14
+END
+
+IDD_BATCH_DIALOG DIALOG 0, 0, 186, 90
+STYLE DS_SETFONT | DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Batch Type"
+FONT 8, "MS Sans Serif"
+BEGIN
+    DEFPUSHBUTTON   "Basic",IDBASIC,66,15,52,14
+    PUSHBUTTON      "Include Std. Deviation",IDSTD,47,35,89,14
+    PUSHBUTTON      "Show Individual Slices",IDINDIV,47,58,87,14
+END
+
+IDD_BATCH DIALOG 0, 0, 186, 90
+STYLE DS_SETFONT | DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Choose Batch Type"
+FONT 8, "MS Sans Serif"
+BEGIN
+    DEFPUSHBUTTON   "OK",IDOK,119,69,50,14
+    PUSHBUTTON      "Cancel",IDCANCEL,14,69,50,14
+    CONTROL         "Average Only",IDC_BASIC,"Button",BS_AUTORADIOBUTTON,7,13,59,10
+    CONTROL         "Average and Standard Deviation",IDC_STD,"Button",BS_AUTORADIOBUTTON,7,31,119,10
+    CONTROL         "Individual Measurements",IDC_INDIV,"Button",BS_AUTORADIOBUTTON,7,50,94,10
+END
+
+IDD_ADDFIELD DIALOGEX 0, 0, 265, 270
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION
+CAPTION "Add/Edit Data Columns"
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    DEFPUSHBUTTON   "Next >",IDOK,58,249,50,14
+    PUSHBUTTON      "Finish",ID_OK1,158,249,50,14
+    LTEXT           "Column 1:",IDC_ADDF_LABEL1,40,141,33,9
+    EDITTEXT        IDC_ADDF_MEASURE1,104,133,111,29,ES_AUTOHSCROLL
+    LTEXT           "Column 2:",IDC_ADDF_LABEL2,39,177,33,9
+    EDITTEXT        IDC_ADDF_MEASURE2,103,168,111,29,ES_AUTOHSCROLL
+    LTEXT           "Column 3:",IDC_ADDF_LABEL3,39,212,33,9
+    EDITTEXT        IDC_ADDF_MEASURE3,103,203,111,29,ES_AUTOHSCROLL
+    PUSHBUTTON      "Edit",IDC_EDIT,108,249,50,14,WS_DISABLED
+    EDITTEXT        IDC_COLLIST,32,49,198,78,ES_MULTILINE | ES_AUTOHSCROLL | ES_READONLY | NOT WS_BORDER
+    LTEXT           "The previously added user-created columns are listed below. Use the text boxes to add to the list. Use the Edit button to make changes to or remove columns that were added.",IDC_COLLABEL,14,11,237,32
+END
+
+IDD_ADDDATA DIALOGEX 0, 0, 285, 195
+STYLE DS_SETFONT | DS_MODALFRAME | WS_POPUP | WS_CAPTION
+CAPTION "Add/Edit Data for User-Added Columns"
+FONT 8, "Microsoft Sans Serif", 400, 0, 0x0
+BEGIN
+    EDITTEXT        IDC_EDIT1,135,106,123,53,ES_MULTILINE | WS_VSCROLL
+    DEFPUSHBUTTON   "Next >",IDOK,92,174,50,14
+    PUSHBUTTON      "Finish",IDC_FINISH,144,174,50,14
+    LTEXT           "Enter data for the listed object below. The field will have the current data for the object automatically placed in it. Making the field blank will remove the entry for the object.",IDC_STATIC,16,8,255,24
+    LTEXT           "Object:",IDC_STATIC,42,107,70,12,SS_CENTERIMAGE
+    COMBOBOX        IDC_COMBO1,96,72,92,208,CBS_DROPDOWNLIST | WS_VSCROLL | WS_TABSTOP
+    LTEXT           "Column Heading:",IDC_STATIC,97,60,74,11,SS_CENTERIMAGE
+    COMBOBOX        IDC_COMBO2,41,118,82,154,CBS_DROPDOWNLIST | WS_VSCROLL | WS_TABSTOP
+    LTEXT           "Data:",IDC_STATIC,135,96,18,8
+    LTEXT           "When assigning data, all analyzed objects are listed in the dropdown box, including rulers and labels. Also, object numbers are assigned left-to-right.",IDC_STATIC,16,36,255,18
+END
+
+IDD_LAB_DIALOG DIALOGEX 0, 0, 218, 217
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION
+CAPTION "Input L*a*b* Values for Color Checker"
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    EDITTEXT        IDC_LSTAR_BOX,71,104,64,12
+    EDITTEXT        IDC_ASTAR_BOX,71,124,64,12
+    EDITTEXT        IDC_BSTAR_BOX,71,145,64,12
+    DEFPUSHBUTTON   "Next",IDC_NEXT,54,169,50,14
+    PUSHBUTTON      "Finish",IDC_FINISH,105,169,49,14
+    PUSHBUTTON      "Cancel",IDCANCEL,160,196,50,14
+    COMBOBOX        IDC_PALETTE,52,80,101,192,CBS_DROPDOWNLIST | WS_VSCROLL | WS_TABSTOP
+    LTEXT           "L*",IDC_LSTAR_TEXT,52,105,9,8
+    LTEXT           "a*",IDC_ASTAR_TEXT,52,127,9,8
+    LTEXT           "b*",IDC_BSTAR_TEXT,52,148,9,8
+    LTEXT           "Input the L*a*b* values for each tile on the color checker. These values should be provided with the color checker. ",IDC_STATIC,13,58,193,26
+    GROUPBOX        "Manual data entry",IDC_STATIC,7,45,203,142
+    GROUPBOX        "CSV data entry",IDC_STATIC,7,7,203,33
+    PUSHBUTTON      "Choose File...",IDC_FILE,71,17,64,14
+END
+
+IDD_EDITCOL DIALOGEX 0, 0, 349, 361
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION
+CAPTION "Edit/Remove Data Columns"
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    DEFPUSHBUTTON   "OK",IDOK,241,340,50,14
+    PUSHBUTTON      "Cancel",IDCANCEL,292,340,50,14
+    EDITTEXT        IDC_DATACOL2,135,14,79,26,ES_MULTILINE | NOT WS_VISIBLE
+    EDITTEXT        IDC_DATACOL1,43,14,79,26,ES_MULTILINE | NOT WS_VISIBLE
+    EDITTEXT        IDC_DATACOL5,135,44,79,26,ES_MULTILINE | NOT WS_VISIBLE
+    EDITTEXT        IDC_DATACOL7,43,75,79,26,ES_MULTILINE | NOT WS_VISIBLE
+    EDITTEXT        IDC_DATACOL4,43,44,79,26,ES_MULTILINE | NOT WS_VISIBLE
+    EDITTEXT        IDC_DATACOL8,135,75,79,26,ES_MULTILINE | NOT WS_VISIBLE
+    EDITTEXT        IDC_DATACOL10,43,105,79,26,ES_MULTILINE | NOT WS_VISIBLE
+    EDITTEXT        IDC_DATACOL11,135,105,79,26,ES_MULTILINE | NOT WS_VISIBLE
+    EDITTEXT        IDC_DATACOL13,43,136,79,26,ES_MULTILINE | NOT WS_VISIBLE
+    EDITTEXT        IDC_DATACOL14,135,136,79,26,ES_MULTILINE | NOT WS_VISIBLE
+    EDITTEXT        IDC_DATACOL3,227,14,79,26,ES_MULTILINE | NOT WS_VISIBLE
+    EDITTEXT        IDC_DATACOL6,227,44,79,26,ES_MULTILINE | NOT WS_VISIBLE
+    EDITTEXT        IDC_DATACOL9,227,75,79,26,ES_MULTILINE | NOT WS_VISIBLE
+    EDITTEXT        IDC_DATACOL12,227,105,79,26,ES_MULTILINE | NOT WS_VISIBLE
+    EDITTEXT        IDC_DATACOL15,227,136,79,26,ES_MULTILINE | NOT WS_VISIBLE
+    EDITTEXT        IDC_DATACOL16,43,167,79,26,ES_MULTILINE | NOT WS_VISIBLE
+    EDITTEXT        IDC_DATACOL17,135,167,79,26,ES_MULTILINE | NOT WS_VISIBLE
+    EDITTEXT        IDC_DATACOL18,227,167,79,26,ES_MULTILINE | NOT WS_VISIBLE
+    EDITTEXT        IDC_DATACOL19,43,198,79,26,ES_MULTILINE | NOT WS_VISIBLE
+    EDITTEXT        IDC_DATACOL20,135,199,79,26,ES_MULTILINE | NOT WS_VISIBLE
+    EDITTEXT        IDC_DATACOL21,227,199,79,26,ES_MULTILINE | NOT WS_VISIBLE
+    EDITTEXT        IDC_DATACOL22,43,230,79,26,ES_MULTILINE | NOT WS_VISIBLE
+    EDITTEXT        IDC_DATACOL23,135,230,79,26,ES_MULTILINE | NOT WS_VISIBLE
+    EDITTEXT        IDC_DATACOL24,227,230,79,26,ES_MULTILINE | NOT WS_VISIBLE
+    EDITTEXT        IDC_DATACOL25,43,262,79,26,ES_MULTILINE | NOT WS_VISIBLE
+    EDITTEXT        IDC_DATACOL26,135,263,79,26,ES_MULTILINE | NOT WS_VISIBLE
+    EDITTEXT        IDC_DATACOL27,227,263,79,26,ES_MULTILINE | NOT WS_VISIBLE
+    EDITTEXT        IDC_DATACOL28,43,295,79,26,ES_MULTILINE | NOT WS_VISIBLE
+    EDITTEXT        IDC_DATACOL29,135,295,79,26,ES_MULTILINE | NOT WS_VISIBLE
+    EDITTEXT        IDC_DATACOL30,227,295,79,26,ES_MULTILINE | NOT WS_VISIBLE
+END
+
+IDD_COLORRANGEDIALOG DIALOGEX 0, 0, 447, 235
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Custom Color Parameters"
+FONT 8, "MS Shell Dlg", 0, 0, 0x0
+BEGIN
+    DEFPUSHBUTTON   "OK",IDOK,146,214,50,14
+    PUSHBUTTON      "Cancel",IDCANCEL,252,214,50,14
+    EDITTEXT        IDC_LOWERL1,28,19,30,14,ES_AUTOHSCROLL
+    LTEXT           "<= L* <",IDC_STATIC,65,22,28,8
+    EDITTEXT        IDC_UPPERL1,98,19,30,14,ES_AUTOHSCROLL
+    EDITTEXT        IDC_LOWERHUE1,165,19,30,14,ES_AUTOHSCROLL
+    LTEXT           "<= Hue <",IDC_STATIC,199,22,34,8
+    EDITTEXT        IDC_UPPERHUE1,237,19,30,14,ES_AUTOHSCROLL
+    EDITTEXT        IDC_LOWERCHROMA1,305,19,30,14,ES_AUTOHSCROLL
+    LTEXT           "<= Chroma <",IDC_STATIC,339,22,46,8
+    EDITTEXT        IDC_UPPERCHROMA1,389,19,30,14,ES_AUTOHSCROLL
+    EDITTEXT        IDC_LOWERL2,28,53,30,14,ES_AUTOHSCROLL
+    LTEXT           "<= L* <",IDC_STATIC,65,56,28,8
+    EDITTEXT        IDC_UPPERL2,98,53,30,14,ES_AUTOHSCROLL
+    EDITTEXT        IDC_LOWERHUE2,165,53,30,14,ES_AUTOHSCROLL
+    LTEXT           "<= Hue <",IDC_STATIC,199,56,34,8
+    EDITTEXT        IDC_UPPERHUE2,237,53,30,14,ES_AUTOHSCROLL
+    EDITTEXT        IDC_LOWERCHROMA2,305,53,30,14,ES_AUTOHSCROLL
+    LTEXT           "<= Chroma <",IDC_STATIC,339,56,46,8
+    EDITTEXT        IDC_UPPERCHROMA2,389,53,30,14,ES_AUTOHSCROLL
+    EDITTEXT        IDC_LOWERL3,28,87,30,14,ES_AUTOHSCROLL
+    LTEXT           "<= L* <",IDC_STATIC,65,91,28,8
+    EDITTEXT        IDC_UPPERL3,98,87,30,14,ES_AUTOHSCROLL
+    EDITTEXT        IDC_LOWERHUE3,165,87,30,14,ES_AUTOHSCROLL
+    LTEXT           "<= Hue <",IDC_STATIC,199,91,34,8
+    EDITTEXT        IDC_UPPERHUE3,237,87,30,14,ES_AUTOHSCROLL
+    EDITTEXT        IDC_LOWERCHROMA3,305,87,30,14,ES_AUTOHSCROLL
+    LTEXT           "<= Chroma <",IDC_STATIC,339,91,46,8
+    EDITTEXT        IDC_UPPERCHROMA3,389,87,30,14,ES_AUTOHSCROLL
+    EDITTEXT        IDC_LOWERL4,28,120,30,14,ES_AUTOHSCROLL
+    LTEXT           "<= L* <",IDC_STATIC,65,123,28,8
+    EDITTEXT        IDC_UPPERL4,98,120,30,14,ES_AUTOHSCROLL
+    EDITTEXT        IDC_LOWERHUE4,165,120,30,14,ES_AUTOHSCROLL
+    LTEXT           "<= Hue <",IDC_STATIC,199,123,34,8
+    EDITTEXT        IDC_UPPERHUE4,237,120,30,14,ES_AUTOHSCROLL
+    EDITTEXT        IDC_LOWERCHROMA4,305,120,30,14,ES_AUTOHSCROLL
+    LTEXT           "<= Chroma <",IDC_STATIC,339,123,46,8
+    EDITTEXT        IDC_UPPERCHROMA4,389,120,30,14,ES_AUTOHSCROLL
+    EDITTEXT        IDC_LOWERL5,28,152,30,14,ES_AUTOHSCROLL
+    LTEXT           "<= L* <",IDC_STATIC,65,155,28,8
+    EDITTEXT        IDC_UPPERL5,98,152,30,14,ES_AUTOHSCROLL
+    EDITTEXT        IDC_LOWERHUE5,165,152,30,14,ES_AUTOHSCROLL
+    LTEXT           "<= Hue <",IDC_STATIC,199,155,34,8
+    EDITTEXT        IDC_UPPERHUE5,237,152,30,14,ES_AUTOHSCROLL
+    EDITTEXT        IDC_LOWERCHROMA5,305,152,30,14,ES_AUTOHSCROLL
+    LTEXT           "<= Chroma <",IDC_STATIC,339,155,46,8
+    EDITTEXT        IDC_UPPERCHROMA5,389,152,30,14,ES_AUTOHSCROLL
+    EDITTEXT        IDC_LOWERL6,28,185,30,14,ES_AUTOHSCROLL
+    LTEXT           "<= L* <",IDC_STATIC,65,186,28,8
+    EDITTEXT        IDC_UPPERL6,98,185,30,14,ES_AUTOHSCROLL
+    EDITTEXT        IDC_LOWERHUE6,165,185,30,14,ES_AUTOHSCROLL
+    LTEXT           "<= Hue <",IDC_STATIC,199,186,34,8
+    EDITTEXT        IDC_UPPERHUE6,237,185,30,14,ES_AUTOHSCROLL
+    EDITTEXT        IDC_LOWERCHROMA6,305,185,30,14,ES_AUTOHSCROLL
+    LTEXT           "<= Chroma <",IDC_STATIC,339,186,46,8
+    EDITTEXT        IDC_UPPERCHROMA6,389,185,30,14,ES_AUTOHSCROLL
+    GROUPBOX        "Parameter 1",IDC_STATIC,7,7,433,33
+    GROUPBOX        "Parameter 2",IDC_STATIC,7,40,433,33
+    GROUPBOX        "Parameter 3",IDC_STATIC,7,73,433,33
+    GROUPBOX        "Parameter 4",IDC_STATIC,7,106,433,33
+    GROUPBOX        "Parameter 5",IDC_STATIC,7,139,433,33
+    GROUPBOX        "Parameter 6",IDC_STATIC,7,171,433,33
+    PUSHBUTTON      "Clear",IDC_CLEAR,199,214,50,14
+END
+
+IDD_OLDTMT DIALOGEX 0, 0, 263, 63
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION ".tmt File Not Supported"
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    DEFPUSHBUTTON   "OK",IDOK,111,42,50,14
+    LTEXT           "The .tmt file associated with this image is not compatible with this version of Tomato Analyzer and will not be used for analysis.",IDC_STATIC,7,14,248,21
+END
+
+IDD_MAN_DPI DIALOGEX 0, 0, 316, 182
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Dialog"
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    DEFPUSHBUTTON   "OK",IDOK,89,161,50,14
+    PUSHBUTTON      "Cancel",IDCANCEL,177,161,50,14
+    COMBOBOX        IDC_MEASURE_BOX,131,76,48,30,CBS_DROPDOWN | CBS_SORT | WS_VSCROLL | WS_TABSTOP
+END
+
+IDD_POST_DPI DIALOGEX 0, 0, 316, 182
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Dialog"
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    DEFPUSHBUTTON   "OK",IDOK,132,122,50,14
+    EDITTEXT        IDC_NUM_UNITS,136,86,40,14,ES_AUTOHSCROLL
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Version
+//
+
+VS_VERSION_INFO VERSIONINFO
+ FILEVERSION 4,0,0,0
+ PRODUCTVERSION 4,0,0,0
+ FILEFLAGSMASK 0x3fL
+#ifdef _DEBUG
+ FILEFLAGS 0x21L
+#else
+ FILEFLAGS 0x20L
+#endif
+ FILEOS 0x4L
+ FILETYPE 0x1L
+ FILESUBTYPE 0x0L
+BEGIN
+    BLOCK "StringFileInfo"
+    BEGIN
+        BLOCK "040904e4"
+        BEGIN
+            VALUE "CompanyName", "OSU"
+            VALUE "FileDescription", "Tomato Analyzer 4.0"
+            VALUE "FileVersion", "4.0.0.0"
+            VALUE "InternalName", "Tomato Analyzer 4.0.exe"
+            VALUE "LegalCopyright", "Copyright: (c) <Ohio State University>.  All rights reserved."
+            VALUE "OriginalFilename", "Tomato Analyzer 4.0.exe"
+            VALUE "ProductName", "Tomato Analyzer"
+            VALUE "ProductVersion", "4.0.0.0"
+            VALUE "SpecialBuild", "beginning"
+        END
+    END
+    BLOCK "VarFileInfo"
+    BEGIN
+        VALUE "Translation", 0x409, 1252
+    END
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// DESIGNINFO
+//
+
+#ifdef APSTUDIO_INVOKED
+GUIDELINES DESIGNINFO
+BEGIN
+    IDD_ABOUTBOX, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 238
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 48
+    END
+
+    IDR_MAINFRAME, DIALOG
+    BEGIN
+    END
+
+    IDD_PROGRESS_DIALOG, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 128
+        TOPMARGIN, 6
+        BOTTOMMARGIN, 42
+    END
+
+    IDD_SLICEINFO, DIALOG
+    BEGIN
+        LEFTMARGIN, 6
+        RIGHTMARGIN, 318
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 103
+    END
+
+    IDD_PARAMETER, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 203
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 52
+    END
+
+    IDD_SAVEDATADLG, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 289
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 210
+    END
+
+    IDD_SCANNER_DPI, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 209
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 50
+    END
+
+    IDD_BLOCKINESS, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 179
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 75
+    END
+
+    IDD_SAVEDATA_DLG, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 255
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 173
+    END
+
+    IDD_SLICEINFO_DLG, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 304
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 137
+    END
+
+    IDD_SELECT_MEASUREMENT, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 195
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 167
+    END
+
+    IDD_LEVEL_CONTROL1, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 141
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 108
+    END
+
+    IDD_COLORTEST, DIALOG
+    BEGIN
+        LEFTMARGIN, 6
+        RIGHTMARGIN, 251
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 263
+    END
+
+    IDD_STARTUP, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 348
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 215
+    END
+
+    IDD_PCA_POINTS, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 294
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 66
+    END
+
+    IDD_ELLIPSE_SIZE, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 179
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 83
+    END
+
+    IDD_PERICARPSIZE, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 179
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 83
+    END
+
+    IDD_BATCH_DIALOG, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 179
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 83
+    END
+
+    IDD_BATCH, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 179
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 83
+    END
+
+    IDD_ADDFIELD, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 258
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 263
+    END
+
+    IDD_ADDDATA, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 278
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 188
+    END
+
+    IDD_LAB_DIALOG, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 210
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 210
+    END
+
+    IDD_EDITCOL, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 342
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 354
+    END
+
+    IDD_COLORRANGEDIALOG, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 440
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 228
+    END
+
+    IDD_OLDTMT, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 255
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 56
+    END
+
+    IDD_MAN_DPI, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 309
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 175
+    END
+
+    IDD_POST_DPI, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 309
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 175
+    END
+END
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Toolbar
+//
+
+IDR_MAINFRAME TOOLBAR 31, 32
+BEGIN
+    BUTTON      ID_FILE_OPEN
+    BUTTON      ID_SAVE_FRUIT
+    SEPARATOR
+    BUTTON      ID_EXPORT_DATA
+    SEPARATOR
+    BUTTON      ID_ZOOM
+    SEPARATOR
+    BUTTON      ID_ANALYZE_IMG
+    BUTTON      ID_ANALYZE_COLOR
+    BUTTON      ID_MANUAL_REVISE
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog Info
+//
+
+IDD_MAN_DPI DLGINIT
+BEGIN
+    IDC_MEASURE_BOX, 0x403, 7, 0
+0x6e49, 0x6863, 0x7365, "\000" 
+    IDC_MEASURE_BOX, 0x403, 12, 0
+0x694d, 0x6c6c, 0x6d69, 0x7465, 0x7265, 0x0073, 
+    IDC_MEASURE_BOX, 0x403, 7, 0
+0x6950, 0x6578, 0x736c, "\000" 
+    IDC_MEASURE_BOX, 0x403, 12, 0
+0x6543, 0x746e, 0x6d69, 0x7465, 0x7265, 0x0073, 
+    0
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// String Table
+//
+
+STRINGTABLE
+BEGIN
+    IDR_MAINFRAME           "Tomato Analyzer\n\nTomatoAnalyzer\n\n\nTomatoAnalyzer.Document\nTomatoAnalyzer.Document"
+    IDS_GROUP_L_RANGES      "L* Distribution"
+    IDS_GROUP_HUE_RANGES    "Hue Distribution"
+    IDS_GROUP_CHROMA_RANGES "Chroma Distribution"
+    IDS_GROUP_COLOR_USER_RANGES "Custom Color Parameters"
+    IDS_MEAS_CURVED_FRUIT_SHAPE_INDEX "Curved Fruit Shape Index"
+END
+
+STRINGTABLE
+BEGIN
+    AFX_IDS_APP_TITLE       "TomatoAnalyzer"
+    AFX_IDS_IDLEMESSAGE     "Ready"
+END
+
+STRINGTABLE
+BEGIN
+    ID_INDICATOR_EXT        "EXT"
+    ID_INDICATOR_CAPS       "CAP"
+    ID_INDICATOR_NUM        "NUM"
+    ID_INDICATOR_SCRL       "SCRL"
+    ID_INDICATOR_OVR        "OVR"
+    ID_INDICATOR_REC        "REC"
+END
+
+STRINGTABLE
+BEGIN
+    ID_FILE_OPEN            "Open an existing document\nOpen Image\nOpen"
+    ID_FILE_CLOSE           "Close the image"
+    ID_FILE_SAVE            "Save analyzed image\nSave image\nSave image"
+    ID_FILE_PAGE_SETUP      "Change the printing options\nPage Setup"
+    ID_FILE_PRINT_SETUP     "Change the printer and printing options\nPrint Setup"
+    ID_FILE_PRINT           "Print the active document\nPrint"
+    ID_FILE_PRINT_PREVIEW   "Display full pages\nPrint Preview"
+END
+
+STRINGTABLE
+BEGIN
+    ID_APP_ABOUT            "Display program information, version number and copyright\nAbout"
+    ID_APP_EXIT             "Quit the application; prompts to save documents\nExit"
+END
+
+STRINGTABLE
+BEGIN
+    ID_FILE_MRU_FILE1       "Open this document"
+    ID_FILE_MRU_FILE2       "Open this document"
+    ID_FILE_MRU_FILE3       "Open this document"
+    ID_FILE_MRU_FILE4       "Open this document"
+    ID_FILE_MRU_FILE5       "Open this document"
+    ID_FILE_MRU_FILE6       "Open this document"
+    ID_FILE_MRU_FILE7       "Open this document"
+    ID_FILE_MRU_FILE8       "Open this document"
+    ID_FILE_MRU_FILE9       "Open this document"
+    ID_FILE_MRU_FILE10      "Open this document"
+    ID_FILE_MRU_FILE11      "Open this document"
+    ID_FILE_MRU_FILE12      "Open this document"
+    ID_FILE_MRU_FILE13      "Open this document"
+    ID_FILE_MRU_FILE14      "Open this document"
+    ID_FILE_MRU_FILE15      "Open this document"
+    ID_FILE_MRU_FILE16      "Open this document"
+END
+
+STRINGTABLE
+BEGIN
+    ID_NEXT_PANE            "Switch to the next window pane\nNext Pane"
+    ID_PREV_PANE            "Switch back to the previous window pane\nPrevious Pane"
+END
+
+STRINGTABLE
+BEGIN
+    ID_WINDOW_SPLIT         "Split the active window into panes\nSplit"
+END
+
+STRINGTABLE
+BEGIN
+    ID_EDIT_CLEAR           "Erase the selection\nErase"
+    ID_EDIT_CLEAR_ALL       "Erase everything\nErase All"
+    ID_EDIT_COPY            "Copy the selection and put it on the Clipboard\nCopy"
+    ID_EDIT_CUT             "Cut the selection and put it on the Clipboard\nCut"
+    ID_EDIT_FIND            "Find the specified text\nFind"
+    ID_EDIT_PASTE           "Insert Clipboard contents\nPaste"
+    ID_EDIT_REPEAT          "Repeat the last action\nRepeat"
+    ID_EDIT_REPLACE         "Replace specific text with different text\nReplace"
+    ID_EDIT_SELECT_ALL      "Select the entire document\nSelect All"
+    ID_EDIT_UNDO            "Undo the last action\nUndo"
+    ID_EDIT_REDO            "Redo the previously undone action\nRedo"
+END
+
+STRINGTABLE
+BEGIN
+    ID_VIEW_TOOLBAR         "Show or hide the toolbar\nToggle ToolBar"
+    ID_VIEW_STATUS_BAR      "Show or hide the status bar\nToggle StatusBar"
+END
+
+STRINGTABLE
+BEGIN
+    AFX_IDS_SCSIZE          "Change the window size"
+    AFX_IDS_SCMOVE          "Change the window position"
+    AFX_IDS_SCMINIMIZE      "Reduce the window to an icon"
+    AFX_IDS_SCMAXIMIZE      "Enlarge the window to full size"
+    AFX_IDS_SCNEXTWINDOW    "Switch to the next document window"
+    AFX_IDS_SCPREVWINDOW    "Switch to the previous document window"
+    AFX_IDS_SCCLOSE         "Close the active window and prompts to save the documents"
+END
+
+STRINGTABLE
+BEGIN
+    AFX_IDS_SCRESTORE       "Restore the window to normal size"
+    AFX_IDS_SCTASKLIST      "Activate Task List"
+END
+
+STRINGTABLE
+BEGIN
+    AFX_IDS_PREVIEW_CLOSE   "Close print preview mode\nCancel Preview"
+END
+
+STRINGTABLE
+BEGIN
+    ID_ANALYZE_IMG          "Analyze image\nAnalyze\nAnalyze"
+    ID_FILE_PREV            "Show previous slice result\nPrev\nPrev"
+    ID_FILE_NEXT            "Show next slice result\nNext\nNext"
+    ID_ZOOM                 "Zoom image for clear view\nZoom\nFit"
+    ID_EXPORT_DATA          "Save Analyze Result into File\nExport Data\nSave"
+END
+
+STRINGTABLE
+BEGIN
+    ID_MANUAL_REVISE        "Manually revise the analyze result\nManual\nManual revise"
+END
+
+STRINGTABLE
+BEGIN
+    ID_SYSTEM_SETTING       "Set parameters for image analyzing\nSettings\nSettings"
+END
+
+STRINGTABLE
+BEGIN
+    IDS_MEAS_PERIMETER      "Perimeter"
+END
+
+STRINGTABLE
+BEGIN
+    IDS_MEAS_AREA           "Area"
+    IDS_MEAS_WIDTH_MIDHEIGHT "Width Mid-height"
+    IDS_MEAS_MAXIMUM_WIDTH  "Maximum Width"
+    IDS_MEAS_HEIGHT_MIDWIDTH "Height Mid-width"
+    IDS_MEAS_MAXIMUM_HEIGHT "Maximum Height"
+    IDS_MEAS_CURVED_LENGTH  "Curved Height"
+    IDS_MEAS_FRUIT_SHAPE_INDEX_EXTERNAL_I "Fruit Shape Index External I"
+    IDS_MEAS_FRUIT_SHAPE_INDEX_EXTERNAL_II "Fruit Shape Index External II"
+    IDS_MEAS_PROXIMAL_FRUIT_BLOCKINESS "Proximal Fruit Blockiness"
+    IDS_MEAS_DISTAL_FRUIT_BLOCKINESS "Distal Fruit Blockiness"
+    IDS_MEAS_FRUIT_SHAPE_TRIANGLE "Fruit Shape Triangle"
+    IDS_MEAS_ELLIPSOID      "Ellipsoid"
+    IDS_MEAS_CIRCULAR       "Circular"
+    IDS_MEAS_RECTANGULAR    "Rectangular"
+    IDS_MEAS_HEART_SHAPE    "Heart Shape"
+    IDS_MEAS_SHOULDER_HEIGHT "Shoulder Height"
+END
+
+STRINGTABLE
+BEGIN
+    IDS_MEAS_PROXIMAL_ANGLE_MICRO "Proximal Angle Micro"
+    IDS_MEAS_PROXIMAL_ANGLE_MACRO "Proximal Angle Macro"
+    IDS_MEAS_DISTAL_ANGLE_MICRO "Distal Angle Micro"
+    IDS_MEAS_DISTAL_ANGLE_MACRO "Distal Angle Macro"
+    IDS_MEAS_DISTAL_INDENTATION_AREA "Distal Indentation Area"
+    IDS_MEAS_PROXIMAL_INDENTATION_AREA "Proximal Indentation Area"
+    IDS_MEAS_DISTAL_END_PROTRUSION "Distal End Protrusion"
+    IDS_MEAS_OBOVOID        "Obovoid"
+    IDS_MEAS_OVOID          "Ovoid"
+    IDS_MEAS_V_ASYMMETRY    "V. Asymmetry"
+    IDS_MEAS_H_ASYMMETRY_OBOVOID "H. Asymmetry.ob"
+    IDS_MEAS_H_ASYMMETRY_OVOID "H. Asymmetry.ov"
+    IDS_MEAS_WIDTH_WIDEST_POS "Width Widest Pos"
+    IDS_MEAS_ECCENTRICITY   "Eccentricity"
+    IDS_MEAS_PROXIMAL_ECCENTRICITY "Proximal Eccentricity"
+    IDS_MEAS_DISTAL_ECCENTRICITY "Distal Eccentricity"
+END
+
+STRINGTABLE
+BEGIN
+    IDS_MEAS_FRUIT_SHAPE_INDEX_INTERNAL "Fruit Shape Index Internal"
+    IDS_MEAS_ECCENTRICITY_AREA_INDEX "Eccentricity Area Index"
+    IDS_MEAS_LOBEDNESS_DEGREE "Lobedness Degree"
+    IDS_MEAS_PERICARP_AREA  "Tomato Pericarp Area"
+    IDS_MEAS_PERICARP_THICKNESS "Tomato Pericarp Thickness"
+    IDS_MEAS_PERCENT_OF_PARAMETER_1 "% of Parameter 1"
+    IDS_MEAS_PERCENT_OF_PARAMETER_2 "% of Parameter 2"
+    IDS_MEAS_AVERAGE_RED    "Average Red"
+    IDS_MEAS_AVERAGE_GREEN  "Average Green"
+    IDS_MEAS_AVERAGE_BLUE   "Average Blue"
+    IDS_MEAS_AVERAGE_LUMINOSITY "Average Luminosity"
+    IDS_MEAS_AVERAGE_L_VALUE "Average L Value"
+    IDS_MEAS_AVERAGE_A_VALUE "Average a Value"
+    IDS_MEAS_AVERAGE_B_VALUE "Average b Value"
+    IDS_MEAS_AVERAGE_HUE    "Average Hue"
+    IDS_MEAS_AVERAGE_CHROMA "Average Chroma"
+END
+
+STRINGTABLE
+BEGIN
+    IDS_GROUP_BASIC_MEASUREMENTS "Basic Measurements"
+    IDS_GROUP_FRUIT_SHAPE_INDEX "Fruit Shape Index"
+    IDS_GROUP_BLOCKINESS    "Blockiness"
+    IDS_GROUP_HOMOGENEITY   "Homogeneity"
+    IDS_GROUP_PROXIMAL_FRUIT_END_SHAPE "Proximal Fruit End Shape"
+    IDS_GROUP_DISTAL_FRUIT_END_SHAPE "Distal Fruit End Shape"
+    IDS_GROUP_ASYMMETRY     "Asymmetry"
+    IDS_GROUP_INTERNAL_ECCENTRICITY "Internal Eccentricity"
+    IDS_GROUP_LATITUDINAL_SECTION "Latitudinal Section"
+    IDS_GROUP_MORPHOMETRICS "Morphometrics"
+    IDS_GROUP_COLOR_ANALYSIS "Average Color Values"
+    IDS_GROUP_USER_CREATED  "User Created"
+    IDS_MEAS_PERICARP_AREA_RATIO "Tomato Pericarp Area Ratio"
+    IDS_MEAS_PERICARP_THICKNESS_RATIO "Tomato Pericarp Thickness Ratio"
+    IDS_MEAS_PERICARP_BOUNDARY_LENGTH "Pepper Pericarp Boundary"
+    IDS_MEAS_REAL_PERICARP_AREA "Pepper Pericarp Area"
+END
+
+STRINGTABLE
+BEGIN
+    ID_ANALYZE_COLOR        "Analyze Color\nAnalyze Color\nAnalyze Color"
+END
+
+STRINGTABLE
+BEGIN
+    IDS_MEAS_REAL_PERICARP_THICKNESS "Pepper Pericarp Thickness"
+END
+
+#endif    // English (United States) resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+
+#ifndef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 3 resource.
+//
+#define _AFX_NO_SPLITTER_RESOURCES
+#define _AFX_NO_OLE_RESOURCES
+#define _AFX_NO_TRACKER_RESOURCES
+#define _AFX_NO_PROPERTY_RESOURCES
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)
+LANGUAGE 9, 1
+#pragma code_page(1252)
+#include "res\TomatoAnalyzer.rc2"  // non-Microsoft Visual C++ edited resources
+#include "afxres.rc"         // Standard components
+#include "afxprint.rc"       // printing/print preview resources
+#endif
+
+/////////////////////////////////////////////////////////////////////////////
+#endif    // not APSTUDIO_INVOKED
+

@@ -1,0 +1,29 @@
+/* This file is part of Tomato Analyzer.
+
+    Tomato Analyzer is free software: you can redistribute it and/or modify
+    it under the terms of the GNU General Public License as published by
+    the Free Software Foundation, either version 3 of the License, or
+    (at your option) any later version.
+
+    Tomato Analyzer is distributed in the hope that it will be useful,
+    but WITHOUT ANY WARRANTY; without even the implied warranty of
+    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+    GNU General Public License for more details.
+
+    You should have received a copy of the GNU General Public License
+    along with Tomato Analyzer.  If not, see <http://www.gnu.org/licenses/>. */
+
+#pragma once
+
+/** 
+ * CMsg provides functions to succinctly translate a string table entry to a string. 
+ * 
+ * This class is based on the class described at http://www.codeproject.com/KB/string/stringtable.aspx . 
+ * However, it's not the same and was written without looking at that link's CMsg class, so it should not
+ * need to be credited. 
+ */
+class CMsg {
+public: 
+	static CString CMsg::load(UINT id); 
+}; 
+

@@ -1,0 +1,16 @@
+*.html
+*.htm
+*.css
+*.xml
+CVIPtools/
+Release/
+doc/
+Debug/
+Tomato Analyzer 3.0/
+tomato-analyzer/
+Tomato Analyzer 4.0/
+Backup/
+.svn/
+_UpgradeReport_Files/
+.vs/
+*.csproj
