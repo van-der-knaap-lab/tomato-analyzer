@@ -1,6 +1,22 @@
-# README #
+# Tomato Analyzer
 
-## How do I set this up?
+More information about this project can be found on the [homepage](https://vanderknaaplab.uga.edu/tomato_analyzer.html).
+
+## References
+
+To cite this software, please refer to the following publications:
+
+- [Development of a controlled vocabulary and software application to analyze fruit shape variation in and other plant species. Brewer, M.T., Lang, L., Fujimura, K., Dujmovic, N., Gray, S., and van der Knaap, E. Plant Physiology, 2006, 141, 15-25](https://vanderknaaplab.uga.edu/files/plant_phys_paper.pdf)
+- [Tomato Analyzer-Color Test: a new tool for efficient digital phenotyping. Darrigues, A., Hall, J., van der Knaap, E. and Francis, D.M. J. Am. Soc. of Hort. Sci., 2008, 133, 579-586.](https://vanderknaaplab.uga.edu/vdknaap-staging/files/Darrigues_et_al_2008-TA%20_Color_Test-JASHS.pdf)
+- [Tomato Fruit Shape Analysis Using Morphometric and Morphology Attributes Implemented in Tomato Analyzer Software Program. Gonzalo, M.J. Brewer, M.T., Anderson, C., Sullivan, D., Gray, S., and van der Knaap, E. J. Am. Soc. of Hort. Sci., 2009, 134, 77-87](https://vanderknaaplab.uga.edu/files/Gonzalo_et_al_2009.pdf)
+
+## Acknowledgements
+
+Tomato Analyzer was developed in collaboration with students from the AMRE program at the College of Wooster. 
+
+**Note:** [@w-bonelli](https://github.com/w-bonelli) did not write and does not maintain this software, only moved it to GitHub. 
+
+## Setup
 
 1. Clone the repository.
 2. Download the submodules, if necessary. We rely on rapidjson. The project page for that is found [here](https://github.com/miloyip/rapidjson). You *should* only have to change navigate to `rapidjson/` inside of `tomato-analyzer` and run `git submodule init`, but stuff happens.
